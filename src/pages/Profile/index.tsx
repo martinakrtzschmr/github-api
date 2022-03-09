@@ -25,12 +25,12 @@ interface Data {
 }
 
 const Profile: React.FC = () => {
-  const { username = 'rhivia' } = useParams();
+  const { user = '' } = useParams();
   const [data, setData] = useState<Data>();
   const navigate = useNavigate();
 
-  const requestOne = github.get(`/users/${username}`);
-  const requestTwo = github.get(`/users/${username}/repos`);
+  const requestOne = github.get(`/users/${user}`);
+  const requestTwo = github.get(`/users/${user}/repos`);
 
   useEffect(() => {
     axios.all([requestOne, requestTwo])
@@ -50,7 +50,7 @@ const Profile: React.FC = () => {
     .catch((err) => {
       console.log(err);
     })
-  }, [username]);
+  }, [user]);
 
   if (data?.error) {
     return <h1>{data.error}</h1>
@@ -73,8 +73,9 @@ const Profile: React.FC = () => {
       <Main>
         <LeftSide>
           <ProfileData
-            username={data.user.login}
             name={data.user.name}
+            username={data.user.login}
+            bio={data.user.bio}
             avatarUrl={data.user.avatar_url}
             followers={data.user.followers}
             following={data.user.following}

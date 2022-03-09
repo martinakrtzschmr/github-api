@@ -14,8 +14,9 @@ import {
 } from './styles';
 
 interface Props {
-    username: string;
     name: string;
+    username: string;
+    bio: string;
     avatarUrl: string;
     followers: number;
     following: number;
@@ -26,8 +27,9 @@ interface Props {
 };
 
 const ProfileData: React.FC<Props> = ({
-    username,
     name,
+    username,
+    bio,
     avatarUrl,
     followers,
     following,
@@ -44,6 +46,7 @@ const ProfileData: React.FC<Props> = ({
               <div>
                   <h1>{name}</h1>
                   <h2>{username}</h2>
+                  <h3>{bio}</h3>
               </div>
           </Flex>
 

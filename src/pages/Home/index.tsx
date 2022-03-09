@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { Container, SearchForm } from './styles';
+import { Container, SearchForm, SubmitButton } from './styles';
 
 const Home: React.FC = () => {
     const [search, setSearch] = useState('');
@@ -15,13 +15,17 @@ const Home: React.FC = () => {
 
     return (
         <Container>
-            <SearchForm onSubmit={handleSubmit}>
-                <input
-                    placeholder='Enter username or Repo'
-                    value={search}
-                    onChange={e => setSearch(e.currentTarget.value)}
-                />
-            </SearchForm>
+            <div>
+                <SearchForm onSubmit={handleSubmit}>
+                    <h3>Search for a Github User:</h3>
+                    <input
+                        placeholder='Enter username or Repo'
+                        value={search}
+                        onChange={e => setSearch(e.currentTarget.value)}
+                    />
+                    <SubmitButton onSubmit={handleSubmit}>Search</SubmitButton>
+                </SearchForm>
+            </div>
         </Container>
     )
 };

@@ -1,6 +1,7 @@
 export interface GithubUser {
-  login: string;
   name: string;
+  login: string;
+  bio: string;
   followers: number;
   following: number;
   public_repos: number;
