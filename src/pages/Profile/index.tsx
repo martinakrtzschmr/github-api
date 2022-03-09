@@ -70,6 +70,14 @@ const Profile: React.FC = () => {
 
   return (
     <Container>
+      <Tab className="desktop">
+        <div className="wrapper">
+          <span className="offset" />
+          <TabContent />
+        </div>
+        <span className='line' />
+      </Tab>
+
       <Main>
         <LeftSide>
           <ProfileData
@@ -95,8 +103,6 @@ const Profile: React.FC = () => {
             <span className='line' />
           </Tab>
           <Repos>
-            <h2>Repos</h2>
-
             <div>
               {data.repos.map((repo) => (
                 <RepoCard

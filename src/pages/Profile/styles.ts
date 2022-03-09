@@ -49,7 +49,7 @@ export const BackButton = styled.button`
 `; // <a hrf="" />
 
 export const RightSide = styled.div`
-  padding: 0 var(--horizontal-padding);
+  padding: var(--vertical-padding) var(--horizontal-padding);
   
   @media (min-width: 768px) {
     width: 75%;
@@ -135,7 +135,6 @@ export const Tab = styled.div`
 
       .offset {
         width: 25%;
-        margin-right: var(--horizontal-padding);
       }
     }
   }
