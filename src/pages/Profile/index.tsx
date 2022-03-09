@@ -1,10 +1,29 @@
 import React from 'react';
 
-import { Container, Main, LeftSide, RightSide, Repos } from './styles';
+import {
+  Container,
+  Main,
+  LeftSide,
+  RightSide,
+  Repos,
+  RepoIcon,
+  Tab,
+  BackButton,
+  BackIcon
+} from './styles';
 import ProfileData from '../../components/ProfileData';
 import RepoCard from '../../components/RepoCard';
 
 const Profile: React.FC = () => {
+
+  const TabContent = () => {
+    return <div className='content'>
+      <RepoIcon />
+      <span className='label'>Repositories</span>
+      <span className='numbers'>26</span>
+    </div>
+  };
+
   return (
     <Container>
       <Main>
@@ -20,8 +39,16 @@ const Profile: React.FC = () => {
             email={'alexander.martin64@gmail.com'}
             blog={'linkedin'}
           />
+          <BackButton>
+            <BackIcon />
+            <span>Back</span>
+          </BackButton>
         </LeftSide>
         <RightSide>
+          <Tab className='mobile'>
+            <TabContent />
+            <span className='line' />
+          </Tab>
           <Repos>
             <h2>Repos</h2>
 
