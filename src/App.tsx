@@ -10,7 +10,6 @@ import Repo from './pages/Repo';
 function App() {
   return (
     <BrowserRouter>
-      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:user" element={<Profile />} />

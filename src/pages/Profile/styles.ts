@@ -30,7 +30,7 @@ export const LeftSide = styled.div`
   }
 `;
 
-export const BackButton = styled.a`
+export const BackButton = styled.button`
   display: flex;
   align-items: center;
   margin-top: 24px;

@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+    display: flex;
+    align-items: center;
+    background: var(--home);
+    padding: 11px 16px;
+`;
 
 export const SearchForm = styled.form`
     padding-left: 16px;
