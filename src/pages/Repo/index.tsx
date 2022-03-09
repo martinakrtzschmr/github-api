@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import {
     Container,
@@ -13,6 +13,8 @@ import {
  } from './styles';
 
 const Repo: React.FC = () => {
+    const navigate = useNavigate();
+
     return (
         <Container>
             <Breadcrumb>
@@ -43,7 +45,7 @@ const Repo: React.FC = () => {
                 </li>
             </Info>
 
-            <BackButton>
+            <BackButton onClick={() => navigate(-1)}>
                 <BackIcon />
                 <span>Back</span>
             </BackButton>
