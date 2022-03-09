@@ -20,3 +20,9 @@ Inspiration from the original Github site, using separate Left and Right compone
 
 ## Axios:
 Configuration of Axios in separate 'Services' folder for cleaner React files and more line space in API configs.
+
+### To-Do:
+* Add development tests
+* Add Axios call for Repo page and project exhibition.
+* Add Heat map of development
+* Centralize Search box and improve background
