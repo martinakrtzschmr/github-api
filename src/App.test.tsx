@@ -1,9 +1,15 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, fireEvent, screen, waitFor } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('Test Github API call and navigation', () => {
+  const name = 'Martin Alexander Kretzschmar';
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  fireEvent.change(screen.getByLabelText(/Search for a Github User:/i), {
+    target: {value: 'rhivia'},
+  });
+  fireEvent.click(screen.getByText(/OK/i));
+
+  waitFor(() => expect(screen.getByText(name)).toBeInTheDocument(), { interval: 10000 });
 });

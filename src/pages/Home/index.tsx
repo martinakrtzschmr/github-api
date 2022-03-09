@@ -17,13 +17,14 @@ const Home: React.FC = () => {
         <Container>
             <div>
                 <SearchForm onSubmit={handleSubmit}>
-                    <h3>Search for a Github User:</h3>
+                    <label htmlFor='search-input'>Search for a Github User:</label>
                     <input
+                        id='search-input'
                         placeholder='Enter username or Repo'
                         value={search}
                         onChange={e => setSearch(e.currentTarget.value)}
                     />
-                    <SubmitButton onSubmit={handleSubmit}>Search</SubmitButton>
+                    <SubmitButton onSubmit={handleSubmit}>OK</SubmitButton>
                 </SearchForm>
             </div>
         </Container>

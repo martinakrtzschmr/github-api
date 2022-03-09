@@ -44,7 +44,8 @@ const ProfileData: React.FC<Props> = ({
               <Avatar src={avatarUrl} alt={username} />
 
               <div>
-                  <h1>{name}</h1>
+                  <label htmlFor='name'>Nome:</label>
+                  <h1 id='name'>{name}</h1>
                   <h2>{username}</h2>
                   <h3>{bio}</h3>
               </div>

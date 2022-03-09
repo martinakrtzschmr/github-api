@@ -92,7 +92,7 @@ const Profile: React.FC = () => {
             email={data.user.email}
             blog={data.user.blog}
           />
-          <BackButton onClick={() => navigate(-1)}>
+          <BackButton data-testid='back-button' onClick={() => navigate(-1)}>
             <BackIcon />
             <span>Back</span>
           </BackButton>
