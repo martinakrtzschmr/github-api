@@ -46,7 +46,7 @@ export const BackButton = styled.button`
     fill: var(--primary);
     margin-right: 10px;
   }
-`; // <a hrf="" />
+`;
 
 export const RightSide = styled.div`
   padding: var(--vertical-padding) var(--horizontal-padding);

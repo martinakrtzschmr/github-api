@@ -11,6 +11,7 @@ export const Container = styled.div``;
 
 export const Flex = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
 
   > div {
@@ -30,7 +31,6 @@ export const Flex = styled.div`
   }
 
   @media (min-width: 768px) {
-    flex-direction: column;
     align-items: flex-start;
 
     > div {
@@ -41,7 +41,7 @@ export const Flex = styled.div`
 `;
 
 export const Avatar = styled.img`
-  width: 16%;
+  width: 50%;
   border-radius: 50%;
 
   @media (min-width: 768px) {
