@@ -32,3 +32,10 @@ export const SubmitButton = styled.button`
     padding: 6px;
     border-radius: 10px;
 `;
+
+export const LabelText = styled.label`
+    color: white;
+    font-size: 25px;
+    display: block;
+    margin-bottom: 15px;
+`;

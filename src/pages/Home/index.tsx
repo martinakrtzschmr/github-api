@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { Container, SearchForm, SubmitButton } from './styles';
+import { Container, SearchForm, SubmitButton, LabelText } from './styles';
 
 const Home: React.FC = () => {
     const [search, setSearch] = useState('');
@@ -17,7 +17,7 @@ const Home: React.FC = () => {
         <Container>
             <div>
                 <SearchForm onSubmit={handleSubmit}>
-                    <label htmlFor='search-input'>Search for a Github User:</label>
+                    <LabelText htmlFor='search-input'>Search for a Github User:</LabelText>
                     <input
                         id='search-input'
                         placeholder='Enter username or Repo'

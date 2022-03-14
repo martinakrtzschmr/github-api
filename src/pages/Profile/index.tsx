@@ -29,18 +29,13 @@ const Profile: React.FC = () => {
   const [data, setData] = useState<Data>();
   const navigate = useNavigate();
 
-  const requestOne = github.get(`/users/${user}`);
-  const requestTwo = github.get(`/users/${user}/repos`);
-
   useEffect(() => {
+    const requestOne = github.get(`/users/${user}`);
+    const requestTwo = github.get(`/users/${user}/repos`);
+
     axios.all([requestOne, requestTwo])
     .then(axios.spread((...responses) => {
       const [userResponse, reposResponse] = responses;
-
-      if (userResponse.status === 404) {
-        setData({error: 'User not found!'});
-        return;
-      }
 
       const user = userResponse.data;
       const repos = reposResponse.data;
@@ -48,7 +43,8 @@ const Profile: React.FC = () => {
       setData({user, repos});
     }))
     .catch((err) => {
-      console.log(err);
+      if (err.response.status === 404)
+        setData({error: 'User not found!'})
     })
   }, [user]);
 
