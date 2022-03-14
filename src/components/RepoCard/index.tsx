@@ -34,8 +34,7 @@ const RepoCard: React.FC<Props> = ({
 			<Topside>
 				<header>
 					<RepoIcon />
-					<Link to={'#'}>{reponame}</Link>
-					{/* `/${username}/${reponame}` */}
+					<Link to={`/${username}/${reponame}`}>{reponame}</Link>
 				</header>
 				<p>{description}</p>
 			</Topside>
