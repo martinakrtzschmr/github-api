@@ -45,6 +45,8 @@ const Profile: React.FC = () => {
     .catch((err) => {
       if (err.response.status === 404)
         setData({error: 'User not found!'})
+        if (err.response.status === 403)
+        setData({error: 'Permission denied!'})
     })
   }, [user]);
 
