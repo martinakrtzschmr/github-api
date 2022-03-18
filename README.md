@@ -3,6 +3,7 @@
 
 ## Installation and Start Up for testing:
 ```yarn``` -- for installing depencies, saved on node_modules folder
+
 ```yarn start``` -- to start project on localhost:3000
 
 ## Commands for template:
